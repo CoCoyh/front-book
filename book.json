@@ -1,0 +1,18 @@
+{
+  "title": "前端技术总结",
+  "author": "coco",
+  "description": "",
+  "language": "zh-hans",
+  "links": {
+    "sidebar": {
+      "笔记": "notes.gcc68.com"
+    }
+  },
+  "styles": {
+    "website": "styles/website.css",
+    "ebook": "styles/ebook.css",
+    "pdf": "styles/pdf.css",
+    "mobi": "styles/mobi.css",
+    "epub": "styles/epub.css"
+  }
+}
