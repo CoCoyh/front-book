@@ -14,6 +14,8 @@
   * [react项目中import文件路径优化](react项目中import文件路径优化.md)
   * [React组件开发指南](React组件开发指南.md)
   * [react通过脚手架创建项目](react通过脚手架创建项目.md)
+  * [componentWillReceiveProps的使用](componentWillReceiveProps的使用.md)
+  * [ant-design-pro-layout底部Footer更改]([ant-design-pro-layout底部Footer更改.md)
 * [微前端](micro/README.md)
 * [图表](charts/README.md)
   * [三大图标库:ECharts、BizCharts和G2，该如何选择](三大图标库:ECharts、BizCharts和G2，该如何选择.md) 
