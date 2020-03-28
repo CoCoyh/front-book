@@ -3,6 +3,7 @@
 * [前端技术总结](README.md)
 * [工具](Tools/README.md)
     * [Gitbook安装及使用](Tools/GitBook.md)
+    * [Markdown中使用HTML标签](Tools/Markdown中使用HTML标签.md)
 * [React](React/README.md)
     * [React总结](React/summery.md)
     * [React高级开发](React/React高级开发.md)
