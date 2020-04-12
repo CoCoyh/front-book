@@ -41,6 +41,7 @@
     * [Next与create-react-app应用程序性能更高](Frame/Next与create-react-app应用程序性能更高.md)
 * [Webpack](Webpack/README.md)
     * [Webpack5更新日志](Webpack/webpack5更新日志.md)
+    * [Webpack中实现静态资源内联](Webpack/Webpack中实现静态资源内联.md)
 * [移动端](Mobile/README.md)
     * [移动端适配1px的问题](Mobile/移动端适配1px的问题.md)
 * [布局](Layout/README.md)
