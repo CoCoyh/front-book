@@ -1,0 +1,940 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>工程智能化 · 前端技术总结</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="coco">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="WebAssembly完全入门：了解wasm的前世今生.html" />
+    
+    
+    <link rel="prev" href="跨平台.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="notes.gcc68.com" target="_blank" class="custom-link">笔记</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前端技术总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Tools/">
+            
+                <a href="../Tools/">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Tools/GitBook.html">
+            
+                <a href="../Tools/GitBook.html">
+            
+                    
+                    Gitbook安装及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Tools/Markdown中使用HTML标签.html">
+            
+                <a href="../Tools/Markdown中使用HTML标签.html">
+            
+                    
+                    Markdown中使用HTML标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../React/">
+            
+                <a href="../React/">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../React/summery.html">
+            
+                <a href="../React/summery.html">
+            
+                    
+                    React总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../React/React高级开发.html">
+            
+                <a href="../React/React高级开发.html">
+            
+                    
+                    React高级开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../React/umi-request返回拦截处理.html">
+            
+                <a href="../React/umi-request返回拦截处理.html">
+            
+                    
+                    umi-request返回拦截处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../React/在隔离中开发组件.html">
+            
+                <a href="../React/在隔离中开发组件.html">
+            
+                    
+                    在隔离中开发组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../React/React滚动加载实现.html">
+            
+                <a href="../React/React滚动加载实现.html">
+            
+                    
+                    React滚动加载实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../React/基于ReactCSSTransitionGroup实现react-router过渡动画.html">
+            
+                <a href="../React/基于ReactCSSTransitionGroup实现react-router过渡动画.html">
+            
+                    
+                    基于ReactCSSTransitionGroup实现react-router过渡动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../React/文本转换为markdown实现.html">
+            
+                <a href="../React/文本转换为markdown实现.html">
+            
+                    
+                    文本转换为markdown实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../React/react项目中import文件路径优化.html">
+            
+                <a href="../React/react项目中import文件路径优化.html">
+            
+                    
+                    react项目中import文件路径优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../React/React组件开发指南.html">
+            
+                <a href="../React/React组件开发指南.html">
+            
+                    
+                    React组件开发指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../React/react通过脚手架创建项目.html">
+            
+                <a href="../React/react通过脚手架创建项目.html">
+            
+                    
+                    react通过脚手架创建项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../React/componentWillReceiveProps的使用.html">
+            
+                <a href="../React/componentWillReceiveProps的使用.html">
+            
+                    
+                    componentWillReceiveProps的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../React/ant-design-pro-layout底部Footer更改.html">
+            
+                <a href="../React/ant-design-pro-layout底部Footer更改.html">
+            
+                    
+                    ant-design-pro-layout底部Footer更改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../React/React生命周期.html">
+            
+                <a href="../React/React生命周期.html">
+            
+                    
+                    React生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../React/React-routerv4路由配置方法.html">
+            
+                <a href="../React/React-routerv4路由配置方法.html">
+            
+                    
+                    React-routerv4路由配置方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../React/服务端渲染SSR.html">
+            
+                <a href="../React/服务端渲染SSR.html">
+            
+                    
+                    服务端渲染SSR
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Micro/">
+            
+                <a href="../Micro/">
+            
+                    
+                    微前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Micro/前端为架构实践（Vue）.html">
+            
+                <a href="../Micro/前端为架构实践（Vue）.html">
+            
+                    
+                    前端为架构实践（Vue）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Charts/">
+            
+                <a href="../Charts/">
+            
+                    
+                    图表
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Charts/三大图标库:ECharts、BizCharts和G2，该如何选择.html">
+            
+                <a href="../Charts/三大图标库:ECharts、BizCharts和G2，该如何选择.html">
+            
+                    
+                    三大图标库:ECharts、BizCharts和G2，该如何选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Charts/three.js在React中的运用.html">
+            
+                <a href="../Charts/three.js在React中的运用.html">
+            
+                    
+                    three.js在React中的运用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Browser/">
+            
+                <a href="../Browser/">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Browser/一个TCP连接可以发送多少个HTTP请求.html">
+            
+                <a href="../Browser/一个TCP连接可以发送多少个HTTP请求.html">
+            
+                    
+                    一个TCP连接可以发送多少个HTTP请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Browser/使用http-proxy-middleware代理跨域.html">
+            
+                <a href="../Browser/使用http-proxy-middleware代理跨域.html">
+            
+                    
+                    使用http-proxy-middleware代理跨域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Browser/跨域方式实现原理.html">
+            
+                <a href="../Browser/跨域方式实现原理.html">
+            
+                    
+                    跨域方式实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Browser/常见HTTP请求头，响应头，实体.html">
+            
+                <a href="../Browser/常见HTTP请求头，响应头，实体.html">
+            
+                    
+                    常见HTTP请求头，响应头，实体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Browser/CORS跨域详解.html">
+            
+                <a href="../Browser/CORS跨域详解.html">
+            
+                    
+                    CORS跨域详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    服务框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="BFF.html">
+            
+                <a href="BFF.html">
+            
+                    
+                    BFF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="前端应用层框架.html">
+            
+                <a href="前端应用层框架.html">
+            
+                    
+                    前端应用层框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="前端UI组件库.html">
+            
+                <a href="前端UI组件库.html">
+            
+                    
+                    前端UI组件库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="跨平台.html">
+            
+                <a href="跨平台.html">
+            
+                    
+                    跨平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.5" data-path="工程智能化.html">
+            
+                <a href="工程智能化.html">
+            
+                    
+                    工程智能化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="WebAssembly完全入门：了解wasm的前世今生.html">
+            
+                <a href="WebAssembly完全入门：了解wasm的前世今生.html">
+            
+                    
+                    WebAssembly完全入门：了解wasm的前世今生
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="Next与create-react-app应用程序性能更高.html">
+            
+                <a href="Next与create-react-app应用程序性能更高.html">
+            
+                    
+                    Next与create-react-app应用程序性能更高
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Webpack/">
+            
+                <a href="../Webpack/">
+            
+                    
+                    Webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Webpack/webpack5更新日志.html">
+            
+                <a href="../Webpack/webpack5更新日志.html">
+            
+                    
+                    Webpack5更新日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Webpack/Webpack中实现静态资源内联.html">
+            
+                <a href="../Webpack/Webpack中实现静态资源内联.html">
+            
+                    
+                    Webpack中实现静态资源内联
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Mobile/">
+            
+                <a href="../Mobile/">
+            
+                    
+                    移动端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Mobile/移动端适配1px的问题.html">
+            
+                <a href="../Mobile/移动端适配1px的问题.html">
+            
+                    
+                    移动端适配1px的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Layout/">
+            
+                <a href="../Layout/">
+            
+                    
+                    布局
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../Layout/flex布局.html">
+            
+                <a href="../Layout/flex布局.html">
+            
+                    
+                    flex布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Vue/">
+            
+                <a href="../Vue/">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Vue/基础知识学习.html">
+            
+                <a href="../Vue/基础知识学习.html">
+            
+                    
+                    基础知识学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >工程智能化</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5DE5;&#x7A0B;&#x667A;&#x80FD;&#x5316;">&#x5DE5;&#x7A0B;&#x667A;&#x80FD;&#x5316;</h1>
+<p><img src="https://gcc68.oss-cn-hangzhou.aliyuncs.com/2019-10-23-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-10-23%20%E4%B8%8A%E5%8D%8810.23.28.png?Expires=1571802343&amp;OSSAccessKeyId=TMP.hde1HfRAYQLVUkwjXmVD4LpuPJKyeM2PvycWfaZGHroUMUWM3NAGnXGccriFMVrBDPCcck2iLeZw6k5fxRZgqdYEJYZjjuabL29CFAGy77UF5vy2a82LicxYAxU2Q7.tmp&amp;Signature=xeeLMGRxp0M0jkwLoLQbYPgTEu4%3D" alt=""></p>
+<p>&#x524D;&#x7AEF;&#x672A;&#x6765;&#x53D1;&#x5C55;&#x7684;&#x8D8B;&#x52BF;&#xFF1A;&#x4EBA;&#x5DE5;&#x5316;-&gt; &#x5DE5;&#x5177;&#x5316;-&gt; &#x5DE5;&#x7A0B;&#x5316;-&gt; &#x667A;&#x80FD;&#x5316;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x804A;&#x804A;&#x963F;&#x91CC;&#x5728;&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x5316;&#x7684;&#x53D1;&#x5C55;&#x3002;&#x968F;&#x7740;&#x524D;&#x7AEF;&#x7684;&#x7CFB;&#x7EDF;&#x67B6;&#x6784;&#x8D8A;&#x6765;&#x8D8A;&#x590D;&#x6742;&#xFF0C;&#x6280;&#x672F;&#x6808;&#x4E5F;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#x6837;&#xFF0C;&#x5BF9;&#x4E8E;&#x5927;&#x578B;&#x7814;&#x53D1;&#x56E2;&#x961F;&#x800C;&#x8A00;&#xFF0C;&#x5DE5;&#x7A0B;&#x5316;&#x53EF;&#x4EE5;&#x5728;&#x6280;&#x672F;&#x6808;&#x6807;&#x51C6;&#x5316;&#x3001;&#x7814;&#x53D1;&#x6548;&#x7387;&#x3001;&#x8D28;&#x91CF;&#x63D0;&#x5347;&#x7B49;&#x65B9;&#x9762;&#x8D77;&#x5230;&#x6781;&#x5927;&#x7684;&#x4F5C;&#x7528;&#x3002;</p>
+<h2 id="webide">WebIDE</h2>
+<p><img src="https://gcc68.oss-cn-hangzhou.aliyuncs.com/2019-10-23-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-10-23%20%E4%B8%8A%E5%8D%8810.23.37.png?Expires=1571802368&amp;OSSAccessKeyId=TMP.hde1HfRAYQLVUkwjXmVD4LpuPJKyeM2PvycWfaZGHroUMUWM3NAGnXGccriFMVrBDPCcck2iLeZw6k5fxRZgqdYEJYZjjuabL29CFAGy77UF5vy2a82LicxYAxU2Q7.tmp&amp;Signature=%2FbDN0VYsZSapAb4Ht4NdfzE2lzc%3D" alt=""></p>
+<p>&#x6240;&#x8C13;WebIDE&#x5C31;&#x662F;&#x53EA;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x5C31;&#x80FD;&#x591F;&#x8BA9;&#x4F60;&#x7F16;&#x5199;&#x4EE3;&#x7801;&#x3001;&#x8FD0;&#x884C;&#x4EE3;&#x7801;&#x3001;&#x751A;&#x81F3;&#x53D1;&#x5E03;&#x4EE3;&#x7801;&#x3002;</p>
+<p>WebIDE&#x6709;&#x51E0;&#x4E2A;&#x597D;&#x5904;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;&#x9700;&#x672C;&#x5730;&#x5B89;&#x88C5;IDE</li>
+<li>&#x65E0;&#x9700;&#x5173;&#x6CE8;&#x672C;&#x5730;&#x73AF;&#x5883;&#xFF0C;&#x4F8B;&#x5982;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3001;npm&#x8BBE;&#x7F6E;&#x7B49;&#x7B49;&#x3002;</li>
+<li>&#x591A;&#x4EBA;&#x534F;&#x540C;&#x7F16;&#x8F91;&#xFF0C;&#x7ED3;&#x5BF9;&#x7F16;&#x7A0B;&#x53D8;&#x5F97;&#x66F4;&#x52A0;&#x6709;&#x8DA3;&#x3002;</li>
+<li>&#x53EF;&#x4EE5;&#x5927;&#x540C;&#x73B0;&#x6709;&#x5DE5;&#x7A0B;&#x5316;&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x6DF1;&#x5165;&#x7EE7;&#x627F;&#x811A;&#x624B;&#x67B6;&#x3001;&#x5DE5;&#x7A0B;&#x6A21;&#x7248;&#x3001;&#x53EF;&#x89C6;&#x5316;&#x7EC4;&#x4EF6;&#x7F16;&#x7A0B;&#x3001;&#x7F16;&#x8BD1;&#x3001;&#x6253;&#x5305;&#x3001;&#x90E8;&#x7F72;&#x7B49;&#x7B49;&#x3002;</li>
+</ul>
+<h2 id="&#x4E91;&#x6784;&#x5EFA;">&#x4E91;&#x6784;&#x5EFA;</h2>
+<p><img src="https://gcc68.oss-cn-hangzhou.aliyuncs.com/2019-10-23-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-10-23%20%E4%B8%8A%E5%8D%8810.23.49.png?Expires=1571802385&amp;OSSAccessKeyId=TMP.hde1HfRAYQLVUkwjXmVD4LpuPJKyeM2PvycWfaZGHroUMUWM3NAGnXGccriFMVrBDPCcck2iLeZw6k5fxRZgqdYEJYZjjuabL29CFAGy77UF5vy2a82LicxYAxU2Q7.tmp&amp;Signature=3CrMChIUbvTg69ZLU2DKWr%2FcwEY%3D" alt=""></p>
+<p><img src="https://gcc68.oss-cn-hangzhou.aliyuncs.com/2019-10-23-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-10-23%20%E4%B8%8A%E5%8D%8810.23.57.png?Expires=1571805060&amp;OSSAccessKeyId=TMP.hde1HfRAYQLVUkwjXmVD4LpuPJKyeM2PvycWfaZGHroUMUWM3NAGnXGccriFMVrBDPCcck2iLeZw6k5fxRZgqdYEJYZjjuabL29CFAGy77UF5vy2a82LicxYAxU2Q7.tmp&amp;Signature=vnnjuvZ%2Fl72pU2F9g5SMLUcwbiY%3D" alt=""></p>
+<p>&#x672C;&#x5730;&#x6784;&#x5EFA;&#x5B58;&#x5728;&#x8BB8;&#x591A;&#x95EE;&#x9898;&#xFF0C;&#x4F8B;&#x5982;&#x4F9D;&#x8D56;&#x672C;&#x5730;&#x673A;&#x5668;&#x6027;&#x80FD;&#x6548;&#x7387;&#x5730;&#x4E0B;&#x3001;&#x6784;&#x5EFA;&#x5DE5;&#x5177;&#x4E0D;&#x7EDF;&#x4E00;&#x3001;&#x672C;&#x5730;&#x73AF;&#x5883;&#x4E0D;&#x7EDF;&#x4E00;&#x7B49;&#x7B49;&#x3002;&#x56E0;&#x88AD;&#xFF0C;&#x963F;&#x91CC;&#x57FA;&#x4E8E;Docker&#x865A;&#x62DF;&#x673A;&#x642D;&#x5EFA;&#x524D;&#x7AEF;&#x7CFB;&#x7EDF;&#x6784;&#x5EFA;&#x73AF;&#x5883;&#xFF0C;&#x89E3;&#x51B3;&#x4E86;&#x73AF;&#x5883;&#x4E0D;&#x4E00;&#x81F4;&#x548C;&#x6784;&#x5EFA;&#x6027;&#x80FD;&#x4F4E;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x540C;&#x65F6;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x5B8C;&#x5907;&#x7684;&#x7070;&#x5EA6;&#x7BA1;&#x7406;&#x3001;&#x5B9E;&#x65F6;&#x65E5;&#x5FD7;&#x7684;&#x80FD;&#x529B;&#x3002;</p>
+<p>&#x5728;&#x963F;&#x91CC;&#x5185;&#x90E8;&#xFF0C;&#x4E91;&#x6784;&#x5EFA;&#x76EE;&#x524D;&#x65E5;&#x6D3B;&#x8DC3;&#x7528;&#x6237;&#x6709;1500+&#xFF0C;&#x65E5;&#x72D7;&#x89C1;&#x8C05;5W+&#xFF0C;&#x7269;&#x7406;&#x673A;&#x5668;20+&#xFF0C;&#x4F7F;&#x7528;&#x91CF;&#x8FD8;&#x662F;&#x975E;&#x5E38;&#x5927;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#x8986;&#x76D6;&#x7814;&#x53D1;&#x56E2;&#x961F;&#x4E5F;&#x975E;&#x5E38;&#x5E7F;&#x6CDB;&#x3002;</p>
+<h2 id="&#x667A;&#x80FD;&#x5316;---imgcook">&#x667A;&#x80FD;&#x5316; - imgcook</h2>
+<p><img src="https://gcc68.oss-cn-hangzhou.aliyuncs.com/2019-10-23-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-10-23%20%E4%B8%8A%E5%8D%8810.24.06.png?Expires=1571805090&amp;OSSAccessKeyId=TMP.hde1HfRAYQLVUkwjXmVD4LpuPJKyeM2PvycWfaZGHroUMUWM3NAGnXGccriFMVrBDPCcck2iLeZw6k5fxRZgqdYEJYZjjuabL29CFAGy77UF5vy2a82LicxYAxU2Q7.tmp&amp;Signature=LP%2BXXUCRJKVuYxjPphgxekHX4bA%3D" alt=""></p>
+<p>imgcook &#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x4ECE;&#x8BBE;&#x8BA1;&#xFF08;design&#xFF09;&#x5230;&#x4EE3;&#x7801;&#xFF08;code&#xFF09;&#x7684;&#x8F6C;&#x5316;&#xFF0C;&#x76EE;&#x524D;&#x53EF;&#x4EE5;&#x652F;&#x6301;sketch&#x3001;psd&#x548C;JPG&#x6587;&#x4EF6;&#x3002;&#x5168;&#x94FE;&#x8DEF;&#x91C7;&#x7528;&#x8BA1;&#x7B97;&#x673A;&#x89C6;&#x89C9;&#x3001;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x7B49;&#x667A;&#x80FD;&#x5316;&#x624B;&#x6BB5;&#x4F9D;&#x6B64;&#x53BB;&#x9664;&#x5BF9;&#x8BBE;&#x8BA1;&#x7A3F;&#x7684;&#x7EA6;&#x675F;&#xFF0C;&#x901A;&#x8FC7;&#x5BF9;Font&#x5B57;&#x4F53;&#x8BC6;&#x522B;&#x3001;Iconfont&#x56FE;&#x6807;&#x8BC6;&#x522B;&#x3001;Layout&#x5E03;&#x5C40;&#x8BC6;&#x522B;&#x3001;&#x53EA;&#x667A;&#x80FD;&#x751F;&#x6210;&#x4EE3;&#x7801;&#xFF0C;&#x4FDD;&#x8BC1;&#x4EE3;&#x7801;&#x548C;&#x89C6;&#x89C9;&#x7684;&#x9AD8;&#x5EA6;&#x8FD8;&#x539F;&#x3002;&#x540C;&#x65F6;&#x652F;&#x6301;&#x591A;&#x79CD;DSL&#x4EE3;&#x7801;&#x751F;&#x6210;&#xFF0C;&#x652F;&#x6301;&#x5C0F;&#x7A0B;&#x5E8F;&#x3001;H5&#x3001;Rax&#x3001;Weex&#x7B49;&#x6846;&#x67B6;&#x3002;</p>
+<h2 id="ant-design-next">Ant Design Next</h2>
+<p><img src="https://gcc68.oss-cn-hangzhou.aliyuncs.com/2019-10-23-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-10-23%20%E4%B8%8A%E5%8D%8810.24.14.png?Expires=1571805110&amp;OSSAccessKeyId=TMP.hde1HfRAYQLVUkwjXmVD4LpuPJKyeM2PvycWfaZGHroUMUWM3NAGnXGccriFMVrBDPCcck2iLeZw6k5fxRZgqdYEJYZjjuabL29CFAGy77UF5vy2a82LicxYAxU2Q7.tmp&amp;Signature=BrGUwotv98n6bzsCOpRDqb%2Bn9ec%3D" alt=""></p>
+<p>Ant Design&#x7684;&#x8BBE;&#x8BA1;&#x89C4;&#x8303;&#x548C;&#x7EC4;&#x4EF6;&#x5E93;&#xFF0C;&#x963F;&#x91CC;&#x5BF9;&#x4E2D;&#x540E;&#x53F0;&#x524D;&#x7AEF;&#x7814;&#x53D1;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x5957;low code&#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
+<ul>
+<li><p>&#x53EF;&#x89C6;&#x5316;&#x3001;&#x4F4E;&#x4EE3;&#x7801;&#xFF1A;&#x901A;&#x8FC7;&#x53EF;&#x89C6;&#x5316;&#x62D6;&#x62FD;&#x754C;&#x9762;&#x751F;&#x6210;&#x9875;&#x9762;&#x4EE3;&#x7801;&#xFF0C;&#x81EA;&#x52A8;&#x751F;&#x6210;CSS&#x6587;&#x4EF6;&#x5B8C;&#x6210;&#x5E03;&#x5C40;&#xFF0C;&#x5E76;&#x4E14;&#x901A;&#x8FC7;&#x5C01;&#x88C5;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x3001;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x7B49;&#x64CD;&#x4F5C;&#xFF0C;&#x7B80;&#x5316;JS&#x7684;&#x7F16;&#x5199;&#x3002;</p>
+</li>
+<li><p>&#x63D0;&#x9AD8;&#x6548;&#x7387;&#xFF1A;&#x57FA;&#x4E8E;Rest API&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#xFF0C;&#x81EA;&#x52A8;&#x751F;&#x6210;CRUD&#x9875;&#x9762;&#xFF0C;&#x5B8C;&#x6210;80%&#x4E1A;&#x52A1;&#x573A;&#x666F;&#x3002;</p>
+</li>
+<li><p>&#x63D0;&#x5347;&#x4F53;&#x9A8C;&#xFF1A;&#x901A;&#x8FC7;&#x8BBE;&#x8BA1;&#x89C4;&#x8303;&#x63D0;&#x9AD8;&#x9875;&#x9762;&#x5E03;&#x5C40;&#x89C4;&#x8303;&#xFF0C;&#x540C;&#x65F6;&#x4ECB;&#x7ECD;&#x9875;&#x9762;&#x7EC4;&#x4EF6;&#x6E32;&#x67D3;&#x63D0;&#x5347;&#x9875;&#x9762;&#x6027;&#x80FD;&#xFF0C;&#x901A;&#x8FC7;&#x4E5F;&#x4F1A;&#x5BF9;&#x6784;&#x5EFA;&#x8FDB;&#x884C;&#x5927;&#x91CF;&#x4F18;&#x5316;&#xFF0C;&#x9ED8;&#x8BA4;&#x57CE;&#x5E97;&#x5927;&#x91CF;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#x3002;</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="跨平台.html" class="navigation navigation-prev " aria-label="Previous page: 跨平台">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="WebAssembly完全入门：了解wasm的前世今生.html" class="navigation navigation-next " aria-label="Next page: WebAssembly完全入门：了解wasm的前世今生">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"工程智能化","level":"1.7.5","depth":2,"next":{"title":"WebAssembly完全入门：了解wasm的前世今生","level":"1.7.6","depth":2,"path":"Frame/WebAssembly完全入门：了解wasm的前世今生.md","ref":"Frame/WebAssembly完全入门：了解wasm的前世今生.md","articles":[]},"previous":{"title":"跨平台","level":"1.7.4","depth":2,"path":"Frame/跨平台.md","ref":"Frame/跨平台.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"coco","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端技术总结","language":"zh-hans","links":{"sidebar":{"笔记":"notes.gcc68.com"}},"gitbook":"*","description":""},"file":{"path":"Frame/工程智能化.md","mtime":"2020-06-18T01:16:42.245Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-18T01:17:26.089Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

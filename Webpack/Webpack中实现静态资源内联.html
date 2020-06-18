@@ -1,0 +1,1031 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Webpack中实现静态资源内联 · 前端技术总结</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="coco">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Mobile/" />
+    
+    
+    <link rel="prev" href="webpack5更新日志.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="notes.gcc68.com" target="_blank" class="custom-link">笔记</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前端技术总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Tools/">
+            
+                <a href="../Tools/">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Tools/GitBook.html">
+            
+                <a href="../Tools/GitBook.html">
+            
+                    
+                    Gitbook安装及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Tools/Markdown中使用HTML标签.html">
+            
+                <a href="../Tools/Markdown中使用HTML标签.html">
+            
+                    
+                    Markdown中使用HTML标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../React/">
+            
+                <a href="../React/">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../React/summery.html">
+            
+                <a href="../React/summery.html">
+            
+                    
+                    React总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../React/React高级开发.html">
+            
+                <a href="../React/React高级开发.html">
+            
+                    
+                    React高级开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../React/umi-request返回拦截处理.html">
+            
+                <a href="../React/umi-request返回拦截处理.html">
+            
+                    
+                    umi-request返回拦截处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../React/在隔离中开发组件.html">
+            
+                <a href="../React/在隔离中开发组件.html">
+            
+                    
+                    在隔离中开发组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../React/React滚动加载实现.html">
+            
+                <a href="../React/React滚动加载实现.html">
+            
+                    
+                    React滚动加载实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../React/基于ReactCSSTransitionGroup实现react-router过渡动画.html">
+            
+                <a href="../React/基于ReactCSSTransitionGroup实现react-router过渡动画.html">
+            
+                    
+                    基于ReactCSSTransitionGroup实现react-router过渡动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../React/文本转换为markdown实现.html">
+            
+                <a href="../React/文本转换为markdown实现.html">
+            
+                    
+                    文本转换为markdown实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../React/react项目中import文件路径优化.html">
+            
+                <a href="../React/react项目中import文件路径优化.html">
+            
+                    
+                    react项目中import文件路径优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../React/React组件开发指南.html">
+            
+                <a href="../React/React组件开发指南.html">
+            
+                    
+                    React组件开发指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../React/react通过脚手架创建项目.html">
+            
+                <a href="../React/react通过脚手架创建项目.html">
+            
+                    
+                    react通过脚手架创建项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../React/componentWillReceiveProps的使用.html">
+            
+                <a href="../React/componentWillReceiveProps的使用.html">
+            
+                    
+                    componentWillReceiveProps的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../React/ant-design-pro-layout底部Footer更改.html">
+            
+                <a href="../React/ant-design-pro-layout底部Footer更改.html">
+            
+                    
+                    ant-design-pro-layout底部Footer更改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../React/React生命周期.html">
+            
+                <a href="../React/React生命周期.html">
+            
+                    
+                    React生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../React/React-routerv4路由配置方法.html">
+            
+                <a href="../React/React-routerv4路由配置方法.html">
+            
+                    
+                    React-routerv4路由配置方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../React/服务端渲染SSR.html">
+            
+                <a href="../React/服务端渲染SSR.html">
+            
+                    
+                    服务端渲染SSR
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Micro/">
+            
+                <a href="../Micro/">
+            
+                    
+                    微前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Micro/前端为架构实践（Vue）.html">
+            
+                <a href="../Micro/前端为架构实践（Vue）.html">
+            
+                    
+                    前端为架构实践（Vue）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Charts/">
+            
+                <a href="../Charts/">
+            
+                    
+                    图表
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Charts/三大图标库:ECharts、BizCharts和G2，该如何选择.html">
+            
+                <a href="../Charts/三大图标库:ECharts、BizCharts和G2，该如何选择.html">
+            
+                    
+                    三大图标库:ECharts、BizCharts和G2，该如何选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Charts/three.js在React中的运用.html">
+            
+                <a href="../Charts/three.js在React中的运用.html">
+            
+                    
+                    three.js在React中的运用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Browser/">
+            
+                <a href="../Browser/">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Browser/一个TCP连接可以发送多少个HTTP请求.html">
+            
+                <a href="../Browser/一个TCP连接可以发送多少个HTTP请求.html">
+            
+                    
+                    一个TCP连接可以发送多少个HTTP请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Browser/使用http-proxy-middleware代理跨域.html">
+            
+                <a href="../Browser/使用http-proxy-middleware代理跨域.html">
+            
+                    
+                    使用http-proxy-middleware代理跨域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Browser/跨域方式实现原理.html">
+            
+                <a href="../Browser/跨域方式实现原理.html">
+            
+                    
+                    跨域方式实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Browser/常见HTTP请求头，响应头，实体.html">
+            
+                <a href="../Browser/常见HTTP请求头，响应头，实体.html">
+            
+                    
+                    常见HTTP请求头，响应头，实体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Browser/CORS跨域详解.html">
+            
+                <a href="../Browser/CORS跨域详解.html">
+            
+                    
+                    CORS跨域详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Frame/">
+            
+                <a href="../Frame/">
+            
+                    
+                    服务框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Frame/BFF.html">
+            
+                <a href="../Frame/BFF.html">
+            
+                    
+                    BFF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Frame/前端应用层框架.html">
+            
+                <a href="../Frame/前端应用层框架.html">
+            
+                    
+                    前端应用层框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Frame/前端UI组件库.html">
+            
+                <a href="../Frame/前端UI组件库.html">
+            
+                    
+                    前端UI组件库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Frame/跨平台.html">
+            
+                <a href="../Frame/跨平台.html">
+            
+                    
+                    跨平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../Frame/工程智能化.html">
+            
+                <a href="../Frame/工程智能化.html">
+            
+                    
+                    工程智能化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../Frame/WebAssembly完全入门：了解wasm的前世今生.html">
+            
+                <a href="../Frame/WebAssembly完全入门：了解wasm的前世今生.html">
+            
+                    
+                    WebAssembly完全入门：了解wasm的前世今生
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../Frame/Next与create-react-app应用程序性能更高.html">
+            
+                <a href="../Frame/Next与create-react-app应用程序性能更高.html">
+            
+                    
+                    Next与create-react-app应用程序性能更高
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="webpack5更新日志.html">
+            
+                <a href="webpack5更新日志.html">
+            
+                    
+                    Webpack5更新日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.2" data-path="Webpack中实现静态资源内联.html">
+            
+                <a href="Webpack中实现静态资源内联.html">
+            
+                    
+                    Webpack中实现静态资源内联
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Mobile/">
+            
+                <a href="../Mobile/">
+            
+                    
+                    移动端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Mobile/移动端适配1px的问题.html">
+            
+                <a href="../Mobile/移动端适配1px的问题.html">
+            
+                    
+                    移动端适配1px的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Layout/">
+            
+                <a href="../Layout/">
+            
+                    
+                    布局
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../Layout/flex布局.html">
+            
+                <a href="../Layout/flex布局.html">
+            
+                    
+                    flex布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Vue/">
+            
+                <a href="../Vue/">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Vue/基础知识学习.html">
+            
+                <a href="../Vue/基础知识学习.html">
+            
+                    
+                    基础知识学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Webpack中实现静态资源内联</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="webpack&#x4E2D;&#x5B9E;&#x73B0;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x5185;&#x8054;">Webpack&#x4E2D;&#x5B9E;&#x73B0;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x5185;&#x8054;</h1>
+<h2 id="&#x4EC0;&#x4E48;&#x662F;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x5185;&#x8054;&#xFF08;inline-source&#xFF09;">&#x4EC0;&#x4E48;&#x662F;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x5185;&#x8054;&#xFF08;inline source&#xFF09;</h2>
+<p>&#x5C31;&#x662F;&#x5C06;&#x4E00;&#x4E2A;&#x8D44;&#x6E90;&#x4EE5;&#x5185;&#x8054;&#x7684;&#x65B9;&#x5D4C;&#x5165;&#x8FDB;&#x53E6;&#x4E00;&#x4E2A;&#x8D44;&#x6E90;&#x91CC;&#x9762;</p>
+<p>JS&#x3001;HTML&#x3001;CSS&#x3001;&#x56FE;&#x7247;&#x548C;&#x5B57;&#x4F53;</p>
+<pre><code class="lang-css">// index.css
+.search {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABJ0lEQVQ4T6XSsUoEMRAG4H/ClZaLmbSW1pZ6+gAnFrK+gZXoK6jvIILgE6gIcnYWgmJno6AgYp1Z2EcIGQnsHbuaQ9abMkO+TGaGMGfQnPfxC3DOrajqPoB1AArgnohOvffPucc6ADMfAjgCUMYYH9MFY8wagEsAxyKScp2YAtbaERGNRST7LWZWVd2squq2LbSBMyK6E5GrXKnW2i1jzMh7v5sFmPkzhDCs69rngKIo3GAweBKRpVnAVwhh9Q/gRUQWs4Bz7jzGeFNV1ThXATOXAA5EJDV1Gr2aSETb3vvrLJAOmTmNKY2yVNUHVSVjzBDABYA3ADsi8j4TSIlmkfYAbABYUNUPACdE9NpAHaTXKjPz8k+kF9B8s4P0BibIpBf/AtpN/AYx54AR58WxmQAAAABJRU5ErkJggg==) no-repeat;
+}
+</code></pre>
+<h2 id="&#x8D44;&#x6E90;&#x5185;&#x8054;&#x7684;&#x610F;&#x4E49;">&#x8D44;&#x6E90;&#x5185;&#x8054;&#x7684;&#x610F;&#x4E49;</h2>
+<ul>
+<li>&#x5DE5;&#x7A0B;&#x7EF4;&#x62A4;</li>
+</ul>
+<p>&#x6211;&#x4EEC;&#x53BB;&#x6253;&#x5305;&#x591A;&#x9875;&#x9762;&#x5E94;&#x7528;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x501F;&#x52A9;<code>html-webpack-plugin</code>&#xFF0C;&#x6BCF;&#x4E2A;&#x9875;&#x9762;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;HTML&#x6A21;&#x677F;&#x4E0E;&#x4E4B;&#x5BF9;&#x5E94;&#x3002;&#x6BCF;&#x4E2A;HTML&#x90FD;&#x4F1A;&#x5305;&#x542B;&#x5F88;&#x591A;&#x76F8;&#x4F3C;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6BD4;&#x5982;meta&#x4FE1;&#x606F;&#x3001;&#x6216;SSR&#x65F6;&#x9700;&#x8981;&#x7528;&#x7684;&#x6709;&#x4E9B;&#x5360;&#x4F4D;&#x7B26;&#x7B49;&#x7B49;&#x3002;&#x8BD5;&#x60F3;&#x4E00;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x5C06;&#x4E0B;&#x9762;&#x8FD9;&#x6BB5;meta&#x4EE3;&#x7801;&#x5206;&#x522B;&#x590D;&#x5236;&#x4E00;&#x4EFD;&#x653E;&#x5230;&#x6BCF;&#x4E2A;HTML&#x6A21;&#x7248;&#x91CC;&#x9762;&#x5C06;&#x4F1A;&#x5BF9;&#x4EE3;&#x7801;&#x7EF4;&#x62A4;&#x9020;&#x6210;&#x7684;&#x5F71;&#x54CD;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x63A8;&#x8350;&#x7684;&#x505A;&#x6CD5;&#x662F;&#x7EF4;&#x62A4;&#x4E00;&#x4EFD;meta.html&#xFF0C;&#x5C06;&#x4E0A;&#x9762;&#x7684;&#x8FD9;&#x4E2A;&#x4EE3;&#x7801;&#x5185;&#x5BB9;&#x653E;&#x7F6E;&#x8FDB;&#x53BB;&#x3002;&#x6BCF;&#x4E2A;HTML&#x6A21;&#x677F;&#x5C06;meta.html&#x7247;&#x6BB5;&#x5185;&#x8054;&#x8FDB;&#x53BB;</p>
+<ul>
+<li>&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x65B0;&#x80FD;</li>
+</ul>
+<p>&#x8D44;&#x6E90;&#x5185;&#x8054;&#x7684;&#x7B2C;&#x4E8C;&#x70B9;&#x610F;&#x4E49;&#x5728;&#x4E8E;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;HTTP&#x7684;&#x8BF7;&#x6C42;&#x6570;&#xFF0C;&#x5F53;&#x7136;&#x5982;&#x679C;&#x4F60;&#x7684;&#x7F51;&#x7AD9;&#x6709;&#x4F7F;&#x7528;HTTP2&#x8FD9;&#x70B9;&#x7684;&#x610F;&#x4E49;&#x53EF;&#x80FD;&#x4E0D;&#x4F1A;&#x90A3;&#x4E48;&#x5927;&#x3002;&#x5C06;&#x5404;&#x79CD;&#x5C0F;&#x56FE;&#x7247;&#x3001;&#x5C0F;&#x5B57;&#x4F53;&#xFF08;&#x6BD4;&#x5982;&#xFF1A;&#x5C0F;&#x4E8E;5k&#xFF09;&#x5728;&#x751F;&#x4EA7;&#x73AF;&#x5883;base64&#x5230;&#x4EE3;&#x7801;&#x91CC;&#x9762;&#x53EF;&#x4EE5;&#x6781;&#x5927;&#x7684;&#x51CF;&#x5C11;&#x9875;&#x9762;&#x7684;&#x8BF7;&#x6C42;&#x6570;&#x91CF;&#xFF0C;&#x4ECE;&#x800C;&#x63D0;&#x795E;&#x9875;&#x9762;&#x7684;&#x52A0;&#x8F7D;&#x4E8B;&#x4EF6;</p>
+<ul>
+<li>&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x4F53;&#x9A8C;</li>
+</ul>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x5668;&#x89E3;&#x6790;HTML&#x6E90;&#x7801;&#x662F;&#x4ECE;&#x4E0A;&#x5230;&#x4E0B;&#x6212;&#x5B50;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x4F1A;&#x628A;CSS&#x653E;&#x5927;&#x5934;&#x90E8;&#xFF0C;JS&#x653E;&#x7F6E;&#x5230;&#x5E95;&#x90E8;&#x3002;&#x4EE5;SSR&#x573A;&#x666F;&#x4E3A;&#x4F8B;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5C06;&#x6253;&#x5305;&#x7684;CSS&#x5185;&#x8054;HTML&#x91CC;&#x9762;&#xFF0C;HTML&#x51FA;&#x6765;&#x7684;&#x65F6;&#x5019;&#x9875;&#x9762;&#x7684;&#x7ED3;&#x6784;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x9700;&#x8981;&#x53D1;&#x9001;&#x4E00;&#x6B21;&#x8BF7;&#x6C42;&#x53BB;&#x8BF7;&#x6C42;CSS&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x9875;&#x9762;&#x95EA;&#x70C1;&#xFF0C;&#x7F51;&#x7EDC;&#x60C5;&#x51B5;&#x5DEE;&#x7684;&#x65F6;&#x5019;&#x66F4;&#x660E;&#x663E;</p>
+<h2 id="&#x8D44;&#x6E90;&#x5185;&#x8054;&#x7684;&#x7C7B;&#x578B;">&#x8D44;&#x6E90;&#x5185;&#x8054;&#x7684;&#x7C7B;&#x578B;</h2>
+<ul>
+<li>HTML</li>
+<li>JS</li>
+<li>CSS</li>
+<li>&#x56FE;&#x7247;&#x3001;&#x5B57;&#x4F53;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x4F60;&#x66FE;&#x7ECF;&#x4F7F;&#x7528;&#x8FC7;<a href="http://fis.baidu.com/fis3/docs/beginning/intro.html" target="_blank">FIS</a>&#x6216;&#x8005;&#x770B;&#x8FC7;FIS&#x7684;&#x6587;&#x6863;&#xFF0C;&#x4F60;&#x4F1A;&#x53D1;&#x73B0;FIS&#x5BF9;&#x4E8E;&#x8D44;&#x6E90;&#x5185;&#x8054;&#x7684;&#x652F;&#x6301;&#x975E;&#x5E38;&#x68D2;</p>
+<h3 id="html&#x5185;&#x8054;">HTML&#x5185;&#x8054;</h3>
+<p>&#x501F;&#x52A9;<code>raw-loader</code>&#x5B9E;&#x73B0;&#x7684;&#x5185;&#x8054;&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-html">
+// &#x5185;&#x8054;HTML
+${ require(&apos;raw-loader!./meta.html&apos;)}
+
+// &#x5185;&#x8054;JS&#xFF0C;&#x5982;&#x679C;&#x6709;ES6&#x8BED;&#x6CD5;&#x5219;&#x9700;&#x8981;babel-loader&#x8F6C;&#x6362;
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">${<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;raw-loader!babel-loader!../node_modules/lib-flexible/flexible.js&apos;</span>)}</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h3 id="css&#x5185;&#x8054;">CSS&#x5185;&#x8054;</h3>
+<p>&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x52A0;&#x8F7D;&#x4F53;&#x9A8C;&#xFF0C;&#x6211;&#x4EEC;&#x6842;&#x6C5F;&#x6253;&#x5305;&#x597D;&#x7684;CSS&#x5185;&#x8054;&#x5230;HTML&#x5934;&#x90E8;&#xFF0C;&#x8FD9;&#x6837;HTML&#x52A0;&#x8F7D;&#x5B8C;&#x6210;CSS&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x6E32;&#x67D3;&#x51FA;&#x6765;&#xFF0C;&#x907F;&#x514D;&#x9875;&#x9762;&#x95EA;&#x52A8;&#x7684;&#x60C5;&#x51B5;&#xFF0C;</p>
+<p>CSS&#x5185;&#x8054;&#x7684;&#x6838;&#x5FC3;&#x601D;&#x8DEF;&#x662F;&#xFF1A;&#x5C06;&#x9875;&#x9762;&#x6253;&#x5305;&#x8FC7;&#x7A0B;&#x4EA7;&#x751F;&#x7684;&#x6240;&#x6709;CSS&#x63D0;&#x53D6;&#x6210;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x8FD9;&#x4E2A;CSS&#x6587;&#x4EF6;&#x5185;&#x8054;&#x8FDB;HTML&#x7684;head&#x91CC;&#x9762;&#x3002;&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x501F;&#x52A9;<code>mini-css-extract-plugin</code>&#x548C;<code>html-inline-css-webpack-plugin</code>&#x6765;&#x5B9E;&#x73B0;CSS&#x7684;&#x5185;&#x8054;&#x529F;&#x80FD;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// webpack.config.js</span>
+
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+
+<span class="hljs-built_in">module</span>.exports = {
+    entry: {
+        index: <span class="hljs-string">&apos;./src/index.js&apos;</span>,
+        search: <span class="hljs-string">&apos;./src/search.js&apos;</span>
+    },
+    output: {
+        path: path.join(__dirname, <span class="hljs-string">&apos;dist&apos;</span>),
+        filename: <span class="hljs-string">&apos;[name]_[chunkhash:8].js&apos;</span>
+    },
+    mode: <span class="hljs-string">&apos;production&apos;</span>,
+    plugins: [
+        <span class="hljs-keyword">new</span> MiniCssExtractPlugin({
+            filename: <span class="hljs-string">&apos;[name]_[contenthash:8].css&apos;</span>
+        }),
+        <span class="hljs-keyword">new</span> HtmlWebpackPlugin(),
+        <span class="hljs-keyword">new</span> HTMLInlineCSSWebpackPlugin()
+    ]
+};
+</code></pre>
+<h3 id="&#x56FE;&#x7247;&#x3001;&#x5B57;&#x4F53;&#x5185;&#x8054;">&#x56FE;&#x7247;&#x3001;&#x5B57;&#x4F53;&#x5185;&#x8054;</h3>
+<p>&#x57FA;&#x7840;&#x7248;&#xFF1A;</p>
+<p>&#x56FE;&#x7247;&#x548C;&#x5B57;&#x4F53;&#x7684;&#x5185;&#x8054;&#x53EF;&#x4EE5;&#x501F;&#x52A9;<code>url-loader</code>&#xFF0C;&#x6BD4;&#x5982;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4FEE;&#x6539;webpack&#x914D;&#x7F6E;&#x8BA9;&#x5C0F;&#x4E8E;10k&#x7684;&#x56FE;&#x7247;&#x6216;&#x8005;&#x5B57;&#x4F53;&#x5728;&#x6784;&#x5EFA;&#x9636;&#x6BB5;&#x81EA;&#x52A8;base64.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// webpack.config.js</span>
+
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+
+<span class="hljs-built_in">module</span>.exports = {
+    entry: {
+        index: <span class="hljs-string">&apos;./src/index.js&apos;</span>,
+        search: <span class="hljs-string">&apos;./src/search.js&apos;</span>
+    },
+    output: {
+        path: path.join(__dirname, <span class="hljs-string">&apos;dist&apos;</span>),
+        filename: <span class="hljs-string">&apos;[name]_[chunkhash:8].js&apos;</span>
+    },
+    mode: <span class="hljs-string">&apos;production&apos;</span>,
+    plugins: [
+        <span class="hljs-keyword">new</span> MiniCssExtractPlugin({
+            filename: <span class="hljs-string">&apos;[name]_[contenthash:8].css&apos;</span>
+        }),
+        <span class="hljs-keyword">new</span> HtmlWebpackPlugin(),
+        <span class="hljs-keyword">new</span> HTMLInlineCSSWebpackPlugin()
+    ]
+};
+</code></pre>
+<p>&#x589E;&#x5F3A;&#x7248;&#xFF1A;</p>
+<p>&#x4E0D;&#x8FC7;url-loader&#x505A;&#x8D44;&#x6E90;&#x54EA;&#x8F86;&#x7684;&#x7F3A;&#x9677;&#x5C31;&#x662F;&#x4E0D;&#x80FD;&#x4E2A;&#x6027;&#x5316;&#x7684;&#x8BBE;&#x7F6E;&#x67D0;&#x5F20;&#x56FE;&#x7247;&#x81EA;&#x52A8;&#x7F16;&#x7801;&#xFF0C;&#x9488;&#x5BF9;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x501F;&#x9274;&#x4E0B;FIS&#x7684;&#x8BED;&#x6CD5;&#x7CD6;&#xFF0C;&#x5B9E;&#x73B0;&#xFF1F;_inline&#x7684;&#x8BED;&#x6CD5;&#x7CD6;&#xFF0C;&#x5F15;&#x7528;&#x67D0;&#x4E2A;&#x56FE;&#x7247;&#x7684;&#x65F6;&#x5019;&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x540E;&#x7F00;&#x5219;&#x81EA;&#x52A8;&#x7684;&#x5C06;&#x8FD9;&#x5F20;&#x56FE;&#x7247;&#x8FDB;&#x884C;base64&#x7F16;&#x7801;&#x3002;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x5B9E;&#x73B0;&#x5176;&#x4FE9;&#x4E5F;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<code>inline-file-loader</code>&#xFF0C;&#x6838;&#x5FC3;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loader</span>(<span class="hljs-params">content</span>) </span>{
+  <span class="hljs-keyword">const</span> options = loaderUtils.getOptions(<span class="hljs-keyword">this</span>) || {};
+
+  validateOptions(schema, options, {
+    name: <span class="hljs-string">&apos;File Loader&apos;</span>,
+    baseDataPath: <span class="hljs-string">&apos;options&apos;</span>,
+  });
+
+  <span class="hljs-keyword">const</span> hasInlineFlag = <span class="hljs-regexp">/\?__inline$/</span>.test(<span class="hljs-keyword">this</span>.resource);
+
+  <span class="hljs-keyword">if</span> (hasInlineFlag) {
+    <span class="hljs-keyword">const</span> file = <span class="hljs-keyword">this</span>.resourcePath;
+    <span class="hljs-comment">// Get MIME type</span>
+    <span class="hljs-keyword">const</span> mimetype = options.mimetype || mime.getType(file);
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> content === <span class="hljs-string">&apos;string&apos;</span>) {
+      content = Buffer.from(content);
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`module.exports = <span class="hljs-subst">${JSON.stringify(
+      `data:${mimetype || &apos;&apos;}</span>;base64,<span class="hljs-subst">${content.toString(&apos;base64&apos;)}</span>`</span>
+    )}<span class="hljs-string">`;
+  }
+</span></code></pre>
+<p>&#x6709;&#x4E86;&#x56FE;&#x7247;&#x7684;&#x5185;&#x8054;&#x529F;&#x80FD;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x524D;&#x9762;&#x7684;&#x641C;&#x7D22;icon&#x56FE;&#x6807;&#x5185;&#x8054;&#x7684;&#x989D;&#x5199;&#x6CD5;&#x4FEE;&#x6539;&#xFF1A;</p>
+<pre><code class="lang-css">// index.css
+.search {
+  background: url(./search-icon.png?__inline) no-repeat;
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="webpack5更新日志.html" class="navigation navigation-prev " aria-label="Previous page: Webpack5更新日志">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Mobile/" class="navigation navigation-next " aria-label="Next page: 移动端">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Webpack中实现静态资源内联","level":"1.8.2","depth":2,"next":{"title":"移动端","level":"1.9","depth":1,"path":"Mobile/README.md","ref":"Mobile/README.md","articles":[{"title":"移动端适配1px的问题","level":"1.9.1","depth":2,"path":"Mobile/移动端适配1px的问题.md","ref":"Mobile/移动端适配1px的问题.md","articles":[]}]},"previous":{"title":"Webpack5更新日志","level":"1.8.1","depth":2,"path":"Webpack/webpack5更新日志.md","ref":"Webpack/webpack5更新日志.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"coco","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端技术总结","language":"zh-hans","links":{"sidebar":{"笔记":"notes.gcc68.com"}},"gitbook":"*","description":""},"file":{"path":"Webpack/Webpack中实现静态资源内联.md","mtime":"2020-06-18T01:16:42.245Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-18T01:17:26.089Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

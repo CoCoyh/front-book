@@ -1,0 +1,1123 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>React生命周期 · 前端技术总结</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="coco">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="React-routerv4路由配置方法.html" />
+    
+    
+    <link rel="prev" href="ant-design-pro-layout底部Footer更改.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="notes.gcc68.com" target="_blank" class="custom-link">笔记</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前端技术总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Tools/">
+            
+                <a href="../Tools/">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Tools/GitBook.html">
+            
+                <a href="../Tools/GitBook.html">
+            
+                    
+                    Gitbook安装及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Tools/Markdown中使用HTML标签.html">
+            
+                <a href="../Tools/Markdown中使用HTML标签.html">
+            
+                    
+                    Markdown中使用HTML标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="summery.html">
+            
+                <a href="summery.html">
+            
+                    
+                    React总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="React高级开发.html">
+            
+                <a href="React高级开发.html">
+            
+                    
+                    React高级开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="umi-request返回拦截处理.html">
+            
+                <a href="umi-request返回拦截处理.html">
+            
+                    
+                    umi-request返回拦截处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="在隔离中开发组件.html">
+            
+                <a href="在隔离中开发组件.html">
+            
+                    
+                    在隔离中开发组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="React滚动加载实现.html">
+            
+                <a href="React滚动加载实现.html">
+            
+                    
+                    React滚动加载实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="基于ReactCSSTransitionGroup实现react-router过渡动画.html">
+            
+                <a href="基于ReactCSSTransitionGroup实现react-router过渡动画.html">
+            
+                    
+                    基于ReactCSSTransitionGroup实现react-router过渡动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="文本转换为markdown实现.html">
+            
+                <a href="文本转换为markdown实现.html">
+            
+                    
+                    文本转换为markdown实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="react项目中import文件路径优化.html">
+            
+                <a href="react项目中import文件路径优化.html">
+            
+                    
+                    react项目中import文件路径优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="React组件开发指南.html">
+            
+                <a href="React组件开发指南.html">
+            
+                    
+                    React组件开发指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="react通过脚手架创建项目.html">
+            
+                <a href="react通过脚手架创建项目.html">
+            
+                    
+                    react通过脚手架创建项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="componentWillReceiveProps的使用.html">
+            
+                <a href="componentWillReceiveProps的使用.html">
+            
+                    
+                    componentWillReceiveProps的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="ant-design-pro-layout底部Footer更改.html">
+            
+                <a href="ant-design-pro-layout底部Footer更改.html">
+            
+                    
+                    ant-design-pro-layout底部Footer更改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.13" data-path="React生命周期.html">
+            
+                <a href="React生命周期.html">
+            
+                    
+                    React生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="React-routerv4路由配置方法.html">
+            
+                <a href="React-routerv4路由配置方法.html">
+            
+                    
+                    React-routerv4路由配置方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="服务端渲染SSR.html">
+            
+                <a href="服务端渲染SSR.html">
+            
+                    
+                    服务端渲染SSR
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Micro/">
+            
+                <a href="../Micro/">
+            
+                    
+                    微前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Micro/前端为架构实践（Vue）.html">
+            
+                <a href="../Micro/前端为架构实践（Vue）.html">
+            
+                    
+                    前端为架构实践（Vue）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Charts/">
+            
+                <a href="../Charts/">
+            
+                    
+                    图表
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Charts/三大图标库:ECharts、BizCharts和G2，该如何选择.html">
+            
+                <a href="../Charts/三大图标库:ECharts、BizCharts和G2，该如何选择.html">
+            
+                    
+                    三大图标库:ECharts、BizCharts和G2，该如何选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Charts/three.js在React中的运用.html">
+            
+                <a href="../Charts/three.js在React中的运用.html">
+            
+                    
+                    three.js在React中的运用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Browser/">
+            
+                <a href="../Browser/">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Browser/一个TCP连接可以发送多少个HTTP请求.html">
+            
+                <a href="../Browser/一个TCP连接可以发送多少个HTTP请求.html">
+            
+                    
+                    一个TCP连接可以发送多少个HTTP请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Browser/使用http-proxy-middleware代理跨域.html">
+            
+                <a href="../Browser/使用http-proxy-middleware代理跨域.html">
+            
+                    
+                    使用http-proxy-middleware代理跨域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Browser/跨域方式实现原理.html">
+            
+                <a href="../Browser/跨域方式实现原理.html">
+            
+                    
+                    跨域方式实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Browser/常见HTTP请求头，响应头，实体.html">
+            
+                <a href="../Browser/常见HTTP请求头，响应头，实体.html">
+            
+                    
+                    常见HTTP请求头，响应头，实体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Browser/CORS跨域详解.html">
+            
+                <a href="../Browser/CORS跨域详解.html">
+            
+                    
+                    CORS跨域详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Frame/">
+            
+                <a href="../Frame/">
+            
+                    
+                    服务框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Frame/BFF.html">
+            
+                <a href="../Frame/BFF.html">
+            
+                    
+                    BFF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Frame/前端应用层框架.html">
+            
+                <a href="../Frame/前端应用层框架.html">
+            
+                    
+                    前端应用层框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Frame/前端UI组件库.html">
+            
+                <a href="../Frame/前端UI组件库.html">
+            
+                    
+                    前端UI组件库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Frame/跨平台.html">
+            
+                <a href="../Frame/跨平台.html">
+            
+                    
+                    跨平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../Frame/工程智能化.html">
+            
+                <a href="../Frame/工程智能化.html">
+            
+                    
+                    工程智能化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../Frame/WebAssembly完全入门：了解wasm的前世今生.html">
+            
+                <a href="../Frame/WebAssembly完全入门：了解wasm的前世今生.html">
+            
+                    
+                    WebAssembly完全入门：了解wasm的前世今生
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../Frame/Next与create-react-app应用程序性能更高.html">
+            
+                <a href="../Frame/Next与create-react-app应用程序性能更高.html">
+            
+                    
+                    Next与create-react-app应用程序性能更高
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Webpack/">
+            
+                <a href="../Webpack/">
+            
+                    
+                    Webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Webpack/webpack5更新日志.html">
+            
+                <a href="../Webpack/webpack5更新日志.html">
+            
+                    
+                    Webpack5更新日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Webpack/Webpack中实现静态资源内联.html">
+            
+                <a href="../Webpack/Webpack中实现静态资源内联.html">
+            
+                    
+                    Webpack中实现静态资源内联
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Mobile/">
+            
+                <a href="../Mobile/">
+            
+                    
+                    移动端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Mobile/移动端适配1px的问题.html">
+            
+                <a href="../Mobile/移动端适配1px的问题.html">
+            
+                    
+                    移动端适配1px的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Layout/">
+            
+                <a href="../Layout/">
+            
+                    
+                    布局
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../Layout/flex布局.html">
+            
+                <a href="../Layout/flex布局.html">
+            
+                    
+                    flex布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Vue/">
+            
+                <a href="../Vue/">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Vue/基础知识学习.html">
+            
+                <a href="../Vue/基础知识学习.html">
+            
+                    
+                    基础知识学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >React生命周期</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="react&#x751F;&#x547D;&#x5468;&#x671F;">React&#x751F;&#x547D;&#x5468;&#x671F;</h1>
+<p>&#x603B;&#x4F53;&#x770B;&#x4E0B;React&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x56FE;
+<img src="https://gcc68.oss-cn-hangzhou.aliyuncs.com/2019-11-21-1652a030ed1506e0" alt=""></p>
+<p>React16&#x5E9F;&#x5F03;&#x7684;&#x4E09;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;</p>
+<ul>
+<li><del>componentWillMount</del></li>
+<li><del>componentWillReceiveProps</del></li>
+<li><del>componentWillUpdate</del></li>
+</ul>
+<p>&#x53D6;&#x800C;&#x4EE3;&#x4E4B;&#x7684;&#x662F;&#x4E24;&#x4E2A;&#x65B0;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;</p>
+<ul>
+<li>static getDrivedStateFromProps</li>
+<li>getSnapshotBeforeUpdate</li>
+</ul>
+<p>&#x6211;&#x4EEC;&#x5C06;React&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x5206;&#x4E3A;&#x4E09;&#x4E2A;&#x9636;&#x6BB5;&#xFF0C;&#x7136;&#x540E;&#x8BE6;&#x7EC6;&#x8BB2;&#x89E3;&#x6BCF;&#x4E2A;&#x9636;&#x6BB5;&#x5177;&#x4F53;&#x8C03;&#x7528;&#x4E86;&#x4EC0;&#x4E48;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E09;&#x4E2A;&#x9636;&#x6BB5;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x6302;&#x8F7D;&#x9636;&#x6BB5;</li>
+<li>&#x66F4;&#x65B0;&#x9636;&#x6BB5;</li>
+<li>&#x5378;&#x8F7D;&#x9636;&#x6BB5;</li>
+</ul>
+<h2 id="&#x6302;&#x8F7D;&#x9636;&#x6BB5;">&#x6302;&#x8F7D;&#x9636;&#x6BB5;</h2>
+<p>&#x6302;&#x8F7D;&#x9636;&#x6BB5;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x7EC4;&#x4EF6;&#x7684;&#x521D;&#x59CB;&#x5316;&#x9636;&#x6BB5;&#xFF0C;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x7684;&#x7EC4;&#x4EF6;&#x63D2;&#x5165;&#x5230;DOM&#x4E2D;&#xFF0C;&#x53EA;&#x4F1A;&#x53D1;&#x751F;&#x4E00;&#x6B21;
+&#x8FD9;&#x4E2A;&#x9636;&#x6BB5;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>constructor</li>
+<li>getDerivedStateFromProps</li>
+<li><del>componentWillMount/UNSAVE_componentWillMount</del></li>
+<li>render</li>
+<li>componentDidMount</li>
+</ul>
+<h3 id="constructor">constructor</h3>
+<p>&#x7EC4;&#x4EF6;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x88AB;&#x6267;&#x884C;</p>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x663E;&#x793A;&#x5B9A;&#x4E49;&#x5B83;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;</p>
+<p>&#x5982;&#x679C;&#x663E;&#x793A;&#x5B9A;&#x4E49;&#x4E86;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7B2C;&#x4E00;&#x884C;&#x6267;&#x884C;super&#xFF08;props&#xFF09;,&#x5426;&#x5219;&#x6211;&#x4EEC;&#x65E0;&#x6CD5;&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x91CC;&#x62FF;&#x5230;this&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E9B;&#x5426;&#x5C5E;&#x4E8E;ES6&#x7684;&#x77E5;&#x8BC6;</p>
+<p>&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x91CC;&#x9762;&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x4F1A;&#x505A;&#x4E24;&#x4EF6;&#x4E8B;&#xFF1A;</p>
+<ul>
+<li>&#x521D;&#x59CB;&#x5316;state&#x5BF9;&#x8C61;</li>
+<li>&#x7ED9;&#x81EA;&#x5B9A;&#x4E49;&#x65B9;&#x6CD5;&#x7ED1;&#x5B9A;this&#xFF08;&#x6216;&#x4F7F;&#x7528;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x91CC;&#x4E0D;&#x9700;&#x8981;&#x7ED1;&#x5B9A;&#xFF09;</li>
+</ul>
+<blockquote>
+<p>&#x7981;&#x6B62;&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528;setState&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7ED9;state&#x8BBE;&#x7F6E;&#x521D;&#x59CB;&#x503C;</p>
+</blockquote>
+<h3 id="getderivedstatefromprops">getDerivedStateFromProps</h3>
+<blockquote>
+<p>static getDerivedStateFromProps(nextProps, preState)</p>
+</blockquote>
+<p>&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x80FD;&#x5728;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x91CC;&#x9762;&#x4F7F;&#x7528;this&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;props&#x548C;state&#xFF0C;&#x5206;&#x522B;&#x63A5;&#x53D7;&#x5230;&#x7684;&#x65B0;&#x53C2;&#x6570;&#x548C;&#x5F53;&#x524D;&#x7684;state&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7528;&#x6765;&#x66F4;&#x65B0;&#x5F53;&#x524D;&#x7684;state&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;null</p>
+<p>&#x8BE5;&#x51FD;&#x6570;&#x4F1A;&#x5728;&#x6302;&#x8F7D;&#x65F6;&#xFF0C;&#x63A5;&#x6536;&#x5230;&#x65B0;&#x7684;props&#xFF0C;&#x8C03;&#x7528;&#x4E86;setState&#x548C;forceUpdate&#x65F6;&#x88AB;&#x8C03;&#x7528;</p>
+<p>&#x5728;Reactv16.3&#x65F6;&#x53EA;&#x6709;&#x5728;&#x6302;&#x8F7D;&#x65F6;&#x548C;&#x63A5;&#x6536;&#x5230;&#x65B0;&#x7684;props&#x88AB;&#x8C03;&#x7528;&#xFF0C; &#x636E;&#x8BF4;&#x8FD9;&#x662F;&#x5B98;&#x65B9;&#x7684;&#x5931;&#x8BEF;&#xFF0C;&#x540E;&#x6765;&#x4FEE;&#x590D;&#x4E86;</p>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x53D6;&#x800C;&#x4EE3;&#x4E4B;&#x4E4B;&#x524D;&#x7684;<del>componentWillMount</del>&#x3001;<del>componentWillReceiveProps</del>&#x3001;<del>componentWillUpdate</del></p>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x63A5;&#x53D7;&#x5230;&#x65B0;&#x7684;&#x5C5E;&#x6027;&#x60F3;&#x53BB;&#x4FEE;&#x6539;&#x6211;&#x4EEC;&#x7684;state&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;getDerivedStateFromProps</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExampleComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  state = {
+    isScrollingDown: <span class="hljs-literal">false</span>,
+    lastRow: <span class="hljs-literal">null</span>
+  }
+  <span class="hljs-keyword">static</span> getDerivedStateFromProps(nextProps, prevState) {
+    <span class="hljs-keyword">if</span> (nextProps.currentRow !== prevState.lastRow) {
+        <span class="hljs-keyword">return</span> {
+            isScrollingDown:
+            nextProps.currentRow &gt; prevState.lastRow,
+            lastRow: nextProps.currentRow
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>
+  }
+}
+</code></pre>
+<h3 id="componentwillmountunsafecomponentwillmount"><del>componentWillMount/UNSAFE_componentWillMount</del></h3>
+<p>&#x5728;16&#x7248;&#x672C;&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x5E76;&#x5B58;&#xFF0C;&#x4F46;&#x662F;&#x5728;17&#x7248;&#x672C;<del>componentWillMount</del>&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x5411;&#x4E0B;&#x517C;&#x5BB9;&#xFF0C;&#x5BF9;&#x4E8E;&#x65B0;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x7528;getDerivedStateFromProps&#x4EE3;&#x66FF;&#x5B83;&#x4EEC;</p>
+<p>&#x7531;&#x4E8E;<del>componentWillMount/UNSAFE_componentWillMount</del>&#x662F;&#x5728;render&#x4E4B;&#x524D;&#x8C03;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x7B97;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E2D;&#x8C03;&#x7528;setState&#x4E5F;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x91CD;&#x65B0;&#x6E32;&#x67D3;</p>
+<h3 id="render">render</h3>
+<p>React&#x4E2D;&#x6700;&#x6838;&#x5FC3;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E2D;&#x5FC5;&#x987B;&#x8981;&#x6709;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;</p>
+<p>&#x8FD4;&#x56DE;&#x7684;&#x7C7B;&#x578B;&#x6709;&#x4E00;&#x4E0B;&#x96C6;&#x4E2D;&#xFF1A;</p>
+<ul>
+<li>&#x539F;&#x751F;&#x7684;DOM&#xFF0C;&#x5982;div</li>
+<li>React&#x7EC4;&#x4EF6;</li>
+<li>Fragment&#xFF08;&#x7247;&#x6BB5;&#xFF09;</li>
+<li>Portals&#xFF08;&#x63D2;&#x69FD;&#xFF09;</li>
+<li>&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x6570;&#x5B57;&#xFF0C;&#x88AB;&#x6E32;&#x67D3;&#x6210;text&#x8282;&#x70B9;</li>
+<li>Boolean&#x548C;null&#xFF0C;&#x4E0D;&#x4F1A;&#x6E32;&#x67D3;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;</li>
+</ul>
+<blockquote>
+<p>&#x5173;&#x4E8E;Fragment&#x548C;Portals&#x662F;React16&#x65B0;&#x589E;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x5927;&#x5BB6;&#x4E0D;&#x6E05;&#x695A;&#x53EF;&#x4EE5;&#x53BB;&#x9605;&#x8BFB;&#x5B98;&#x65B9;&#x6587;&#x6863;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x5C55;&#x5F00;&#x4E86;</p>
+</blockquote>
+<p>render&#x51FD;&#x6570;&#x662F;&#x7EAF;&#x51FD;&#x6570;&#xFF0C;&#x91CC;&#x9762;&#x53EA;&#x505A;&#x4E00;&#x4EF6;&#x4E8B;&#x60C5;&#xFF0C;&#x5C31;&#x662F;&#x8FD4;&#x56DE;&#x9700;&#x8981;&#x6E32;&#x67D3;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x4E0D;&#x5E94;&#x8BE5;&#x5305;&#x542B;&#x5176;&#x4ED6;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#xFF0C;&#x5982;&#x6570;&#x636E;&#x8BF7;&#x6C42;&#xFF0C;&#x5BF9;&#x4E8E;&#x8FD9;&#x4E9B;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x8BF7;&#x79FB;&#x5230;componentDidMount&#x548C;componentDid Update&#x4E2D;</p>
+<h3 id="componentdidmount">componentDidMount</h3>
+<p>&#x7EC4;&#x4EF6;&#x88C5;&#x5728;&#x4E4B;&#x540E;&#x8C03;&#x7528;&#xFF0C;&#x6B64;&#x65F6;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5230;DOM&#x8282;&#x70B9;&#x5E76;&#x64CD;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982;&#x5BF9;canvas&#xFF0C;svg&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x8BF7;&#x6C42;&#xFF0C;&#x8BA2;&#x9605;&#x90FD;&#x53EF;&#x4EE5;&#x5199;&#x5728;&#x8FD9;&#x4E2A;&#x91CC;&#x9762;&#xFF0C;&#x4F46;&#x662F;&#x8BB0;&#x5F97;componentWillUnmount&#x53D6;&#x6D88;&#x8BA2;&#x9605;</p>
+<pre><code class="lang-js">componentDidMount() {
+    <span class="hljs-keyword">const</span> { progressCanvas, progressSVG } = <span class="hljs-keyword">this</span>
+
+    <span class="hljs-keyword">const</span> canvas = progressCanvas.current
+    <span class="hljs-keyword">const</span> ctx = canvas.getContext(<span class="hljs-string">&apos;2d&apos;</span>)
+    canvas.width = canvas.getBoundingClientRect().width
+    canvas.height = canvas.getBoundingClientRect().height
+
+    <span class="hljs-keyword">const</span> svg = progressSVG.current
+    <span class="hljs-keyword">const</span> rect = <span class="hljs-built_in">document</span>.createElementNS(<span class="hljs-string">&apos;http://www.w3.org/2000/svg&apos;</span>, <span class="hljs-string">&apos;rect&apos;</span>)
+    rect.setAttribute(<span class="hljs-string">&apos;x&apos;</span>, <span class="hljs-number">0</span>)
+    rect.setAttribute(<span class="hljs-string">&apos;y&apos;</span>, <span class="hljs-number">0</span>)
+    rect.setAttribute(<span class="hljs-string">&apos;width&apos;</span>, <span class="hljs-number">0</span>)
+    rect.setAttribute(<span class="hljs-string">&apos;height&apos;</span>, svg.getBoundingClientRect().height)
+    rect.setAttribute(<span class="hljs-string">&apos;style&apos;</span>, <span class="hljs-string">&apos;fill:red&apos;</span>)
+
+    <span class="hljs-keyword">const</span> animate = <span class="hljs-built_in">document</span>.createElementNS(<span class="hljs-string">&apos;http://www.w3.org/2000/svg&apos;</span>, <span class="hljs-string">&apos;animate&apos;</span>)
+    animate.setAttribute(<span class="hljs-string">&apos;attributeName&apos;</span>, <span class="hljs-string">&apos;width&apos;</span>)
+    animate.setAttribute(<span class="hljs-string">&apos;from&apos;</span>, <span class="hljs-number">0</span>)
+    animate.setAttribute(<span class="hljs-string">&apos;to&apos;</span>, svg.getBoundingClientRect().width)
+    animate.setAttribute(<span class="hljs-string">&apos;begin&apos;</span>, <span class="hljs-string">&apos;0ms&apos;</span>)
+    animate.setAttribute(<span class="hljs-string">&apos;dur&apos;</span>, <span class="hljs-string">&apos;1684ms&apos;</span>)
+    animate.setAttribute(<span class="hljs-string">&apos;repeatCount&apos;</span>, <span class="hljs-string">&apos;indefinite&apos;</span>)
+    animate.setAttribute(<span class="hljs-string">&apos;calcMode&apos;</span>, <span class="hljs-string">&apos;linear&apos;</span>)
+    rect.appendChild(animate)
+    svg.appendChild(rect)
+    svg.pauseAnimations()
+
+    <span class="hljs-keyword">this</span>.canvas = canvas
+    <span class="hljs-keyword">this</span>.svg = svg
+    <span class="hljs-keyword">this</span>.ctx = ctx
+ }
+</code></pre>
+<p>&#x5728;componentDidMount&#x4E2D;&#x8C03;&#x7528;setState&#x4F1A;&#x51FA;&#x53D1;&#x4E00;&#x6B21;&#x989D;&#x5916;&#x7684;&#x6E32;&#x67D3;&#xFF0C;&#x591A;&#x8C03;&#x7528;&#x4E86;&#x4E00;&#x6B21;render&#x51FD;&#x6570;&#xFF0C;&#x4F46;&#x662F;&#x7528;&#x6237;&#x5BF9;&#x6B64;&#x6CA1;&#x6709;&#x611F;&#x77E5;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x662F;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x5237;&#x65B0;&#x5C4F;&#x5E55;&#x524D;&#x6267;&#x884C;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x5728;constructor&#x4E2D;&#x521D;&#x59CB;&#x5316;&#x6211;&#x4EEC;&#x7684;state&#x5BF9;&#x4E0B;&#x884C;&#xFF0C;&#x800C;&#x4E0D;&#x5E94;&#x8BE5;&#x5728;componentDidMount&#x8C03;&#x7528;state&#x65B9;&#x6CD5;</p>
+<h2 id="&#x66F4;&#x65B0;&#x9636;&#x6BB5;">&#x66F4;&#x65B0;&#x9636;&#x6BB5;</h2>
+<p>&#x66F4;&#x65B0;&#x9636;&#x6BB5;&#xFF0C;&#x5F53;&#x7EC4;&#x5EFA;&#x7684;props&#x6539;&#x53D8;&#x4E86;&#xFF0C;&#x6216;&#x7EC4;&#x4EF6;&#x5185;&#x90E8;&#x8C03;&#x7528;&#x4E86;setState&#x6216;&#x7740;forceUpdate&#x53D1;&#x751F;&#xFF0C;&#x4F1A;&#x53D1;&#x751F;&#x591A;&#x6B21;&#x8FD9;&#x4E2A;&#x9636;&#x6BB5;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li><del>componentWillReceiveProps/UNSAFE_componentWillReceiveProps</del></li>
+<li>getDerivedStateFromProps</li>
+<li>shouldComponentUpdate</li>
+<li><del>componentWillUpdate/UNSAFE_componentWillUpdate</del></li>
+<li>render</li>
+<li>getSnapshotBeforeUpdate</li>
+<li>componentDidUpdate</li>
+</ul>
+<h3 id="componentwillreceivepropsunsafecomponentwillreceiveprops"><del>componentWillReceiveProps/UNSAFE_componentWillReceiveProps</del></h3>
+<blockquote>
+<p>componentWillReceiveProps(nextProps, prevState)
+UNSAFE_componentWillReceiveProps(nextProps, prevState)</p>
+</blockquote>
+<p>&#x5728;16&#x7248;&#x672C;&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x5E76;&#x5B58;&#xFF0C;&#x4F46;&#x662F;&#x5728;17&#x7248;&#x672C;&#x4E2D;componentWillReceiveProps&#x88AB;&#x5220;&#x9664;&#xFF0C;UNSAFE_componentWillReceiveProps&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x505A;&#x5411;&#x4E0B;&#x517C;&#x5BB9;&#xFF0C;&#x5BF9;&#x4E8E;&#x65B0;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x7528;getDerivedStateFromProps&#x4EE3;&#x66FF;&#x5B83;&#x4EEC;</p>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x7236;&#x7EC4;&#x4EF6;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E5F;&#x4F1A;&#x5BFC;&#x81F4;&#x6211;&#x4EEC;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#x8C03;&#x7528;componentWillReceiveProps/UNSAFE_componentWillReceiveProps&#xFF0C;&#x5373;&#x4F7F;&#x6211;&#x4EEC;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x4E4B;&#x524D;&#x7684;&#x4E00;&#x6837;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x91CC;&#x9762;&#x53BB;&#x8FDB;&#x884C;&#x5224;&#x65AD;&#xFF0C;&#x5982;&#x679C;&#x524D;&#x540E;&#x5C5E;&#x6027;&#x4E0D;&#x4E00;&#x81F4;&#x624D;&#x53BB;&#x8C03;&#x7528;setState
+&#x5728;&#x88C5;&#x8F7D;&#x9636;&#x6BB5;&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x4E0D;&#x4F1A;&#x88AB;&#x89E6;&#x53D1;&#xFF0C;&#x5728;&#x7EC4;&#x4EF6;&#x5185;&#x90E8;&#x8C03;&#x7528;&#x4E86;setState&#x548C;forceUpdate&#x4E5F;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;</p>
+<h3 id="getderivedstatefromprops">getDerivedStateFromProps</h3>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5728;&#x88C5;&#x8F7D;&#x9636;&#x6BB5;&#x5DF2;&#x7ECF;&#x8BB2;&#x8FC7;&#x4E86;&#xFF0C;&#x8FD9;&#x91CC;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#xFF0C;&#x8BB0;&#x4F4F;&#x5728;&#x66F4;&#x65B0;&#x9636;&#x6BB5;&#xFF0C;&#x65E0;&#x8BBA;&#x6211;&#x4EEC;&#x63A5;&#x6536;&#x5230;&#x65B0;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x8C03;&#x7528;&#x4E86;setState&#x8FD8;&#x662F;&#x8C03;&#x7528;&#x4E86;forceUpdate&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x90FD;&#x4F1A;&#x88AB;&#x8C03;&#x7528;</p>
+<h3 id="shouldcomponentupdate">shouldComponentUpdate</h3>
+<blockquote>
+<p>shouldComponentUpdate(nextProps, nextState)</p>
+</blockquote>
+<p>&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;nextProps&#x548C;nextState&#xFF0C;&#x8868;&#x793A;&#x65B0;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x53D8;&#x5316;&#x4E4B;&#x540E;&#x7684;state&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;&#xFF0C;true&#x8868;&#x793A;&#x4F1A;&#x89E6;&#x53D1;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF0C;false&#x8868;&#x793A;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF0C;&#x9ED8;&#x8BA4;&#x8FD4;&#x56DE;true</p>
+<p>&#x6CE8;&#x610F;&#x5F53;&#x6211;&#x4EEC;&#x8C03;&#x7528;forceUpdate&#x5E76;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x6B64;&#x65B9;&#x6CD5;</p>
+<p>&#x56E0;&#x4E3A;&#x9ED8;&#x8BA4;&#x662F;&#x8FD4;&#x56DE;true&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x53EA;&#x8981;&#x63A5;&#x6536;&#x5230;&#x65B0;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x8C03;&#x7528;&#x4E86;setState&#x90FD;&#x4F1A;&#x89E6;&#x53D1;&#x91CD;&#x65B0;&#x7684;&#x6E32;&#x67D3;&#xFF0C;&#x8FD9;&#x4F1A;&#x5E26;&#x6765;&#x4E00;&#x5B9A;&#x7684;&#x6027;&#x80FD;&#x95EE;&#x9898;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;this.props&#x4E0E;nextProps&#x4EE5;&#x53CA;this.state&#x4E0E;nextState&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x6765;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x8FD4;&#x56DE;false&#xFF0C;&#x6765;&#x51CF;&#x5C11;&#x91CD;&#x65B0;&#x6E32;&#x67D3;</p>
+<p>&#x4F46;&#x662F;&#x5B98;&#x65B9;&#x63D0;&#x5021;&#x6211;&#x4EEC;&#x4F7F;&#x7528;PureComponent&#x6765;&#x51CF;&#x5C11;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x7684;&#x6B21;&#x6570;&#x800C;&#x4E0D;&#x662F;&#x624B;&#x5DE5;&#x7F16;&#x5199;shouldComponentUpdate&#x4EE3;&#x7801;&#xFF0C;&#x5177;&#x4F53;&#x8BE5;&#x600E;&#x4E48;&#x9009;&#x62E9;&#xFF0C;&#x5168;&#x51ED;&#x5F00;&#x53D1;&#x8005;&#x81EA;&#x5DF1;&#x9009;&#x62E9;</p>
+<h3 id="componentwillupdateunsafecomponentwillupdate"><del>componentWillUpdate/UNSAFE_componentWillUpdate</del></h3>
+<blockquote>
+<p>componentWillUpdate(nextProps, nextState)
+UNSAFE_componentWillUpdate(nextProps, nextState)</p>
+</blockquote>
+<p>&#x5728;16&#x7248;&#x672C;&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x5E76;&#x5B58;&#xFF0C;&#x4F46;&#x662F;&#x5728;17&#x7248;&#x672C;&#x4E2D;<del>componentWillUpdate</del>&#x88AB;&#x5220;&#x9664;&#xFF0C;<del>UNSAFE_componentWillUpdate</del>&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x505A;&#x5411;&#x4E0B;&#x517C;&#x5BB9;
+&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x91CC;&#xFF0C;&#x4F60;&#x4E0D;&#x80FD;&#x8C03;&#x7528;setState&#xFF0C;&#x56E0;&#x4E3A;&#x80FD;&#x8D70;&#x5230;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x8BF4;&#x660E;shouldComponentUpdate&#x8FD4;&#x56DE;true&#xFF0C;&#x6B64;&#x65F6;&#x4E0B;&#x4E00;&#x4E2A;state&#x72B6;&#x6001;&#x5DF2;&#x7ECF;&#x88AB;&#x786E;&#x5B9A;&#xFF0C;&#x9A6C;&#x4E0A;&#x5C31;&#x8981;&#x6267;&#x884C;render&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x4E86;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x5BFC;&#x81F4;&#x6574;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;&#x6DF7;&#x4E71;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x4E5F;&#x4E0D;&#x80FD;&#x8BF7;&#x6C42;&#x4E00;&#x4E9B;&#x7F51;&#x7EDC;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x5F02;&#x6B65;&#x6E32;&#x67D3;&#x4E2D;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x591A;&#x6B21;&#xFF0C;&#x5F15;&#x8D77;&#x4E00;&#x4E9B;&#x6027;&#x80FD;&#x95EE;&#x9898;&#xFF0C;
+&#x5982;&#x679C;&#x4F60;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x91CC;&#x4FDD;&#x5B58;&#x4E86;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E5F;&#x662F;&#x4E0D;&#x51C6;&#x786E;&#x7684;&#xFF0C;&#x8FD8;&#x662F;&#x56E0;&#x4E3A;&#x5F02;&#x6B65;&#x6E32;&#x67D3;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x975E;&#x8981;&#x83B7;&#x53D6;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;&#x7684;&#x8BDD;&#xFF0C;&#x8BF7;&#x5728;getSnapshotBeforeUpdate&#x8C03;&#x7528;</p>
+<h3 id="render">render</h3>
+<p>&#x66F4;&#x65B0;&#x9636;&#x6BB5;&#x4E5F;&#x4F1A;&#x89E6;&#x53D1;&#xFF0C;&#x88C5;&#x8F7D;&#x9636;&#x6BB5;&#x5DF2;&#x7ECF;&#x8BB2;&#x8FC7;&#x4E86;&#xFF0C;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;</p>
+<h3 id="getsnapshotbeforeupdate">getSnapshotBeforeUpdate</h3>
+<blockquote>
+<p>getSnapshotBeforeUpdate(prevProps, prevState)</p>
+</blockquote>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5728;render&#x4E4B;&#x540E;&#xFF0C;componentDidUpdate&#x4E4B;&#x524D;&#x8C03;&#x7528;&#xFF0C;&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;prevProps&#x548C;prevState&#xFF0C;&#x8868;&#x793A;&#x4E4B;&#x524D;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x4E4B;&#x524D;&#x7684;state&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x6709;&#x4E00;&#x4E2A;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x4F1A;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x7ED9;componentDidUpdate&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x60F3;&#x8981;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x8BF7;&#x8FD4;&#x56DE;null&#xFF0C;&#x4E0D;&#x5199;&#x7684;&#x8BDD;&#x63A7;&#x5236;&#x53F0;&#x4F1A;&#x6709;&#x8B66;&#x544A;</p>
+<p>&#x524D;&#x9762;&#x8BF4;&#x8FC7;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x65F6;&#x7528;&#x6765;&#x4EE3;&#x66FF;<del>componentWillUpdate/UNSAVE_componentWillUpdate</del>&#xFF0C;&#x4E0B;&#x9762;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#x8BF4;&#x660E;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ScrollingList</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  <span class="hljs-keyword">constructor</span>(props) {
+    <span class="hljs-keyword">super</span>(props);
+    <span class="hljs-keyword">this</span>.listRef = React.createRef();
+  }
+
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    <span class="hljs-comment">// Are we adding new items to the list?</span>
+    <span class="hljs-comment">// Capture the scroll position so we can adjust scroll later.</span>
+    <span class="hljs-keyword">if</span> (prevProps.list.length &lt; <span class="hljs-keyword">this</span>.props.list.length) {
+      <span class="hljs-keyword">const</span> list = <span class="hljs-keyword">this</span>.listRef.current;
+      <span class="hljs-keyword">return</span> list.scrollHeight - list.scrollTop;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    <span class="hljs-comment">// If we have a snapshot value, we&apos;ve just added new items.</span>
+    <span class="hljs-comment">// Adjust scroll so these new items don&apos;t push the old ones out of view.</span>
+    <span class="hljs-comment">// (snapshot here is the value returned from getSnapshotBeforeUpdate)</span>
+    <span class="hljs-keyword">if</span> (snapshot !== <span class="hljs-literal">null</span>) {
+      <span class="hljs-keyword">const</span> list = <span class="hljs-keyword">this</span>.listRef.current;
+      list.scrollTop = list.scrollHeight - snapshot;
+    }
+  }
+
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">{this.listRef}</span>&gt;</span>{/* ...contents... */}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    );
+  }
+}
+</code></pre>
+<h3 id="componentdidupdate">componentDidUpdate</h3>
+<blockquote>
+<p>componentDidUpdate(prevProps, prevState, snapshot)</p>
+</blockquote>
+<p>&#x8BE5;&#x65B9;&#x6CD5;&#x5728;getSnapshotBeforeUpdate&#x65B9;&#x6CD5;&#x4E4B;&#x540E;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x6709;&#x4E09;&#x4E2A;&#x53C2;&#x6570;prevProps&#xFF0C;prevState&#xFF0C;snapshot&#xFF0C;&#x8868;&#x793A;&#x4E4B;&#x524D;&#x7684;props&#xFF0C;&#x4E4B;&#x524D;&#x7684;state&#xFF0C;&#x548C;snapshot&#x3002;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x662F;getSnapshotBeforeUpdate&#x8FD4;&#x56DE;&#x7684;
+&#x5728;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x91CC;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x64CD;&#x4F5C;DOM&#xFF0C;&#x548C;&#x53D1;&#x8D77;&#x670D;&#x52A1;&#x5668;&#x8BF7;&#x6C42;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;setState&#xFF0C;&#x4F46;&#x662F;&#x6CE8;&#x610F;&#x4E00;&#x5B9A;&#x8981;&#x7528;if&#x8BED;&#x53E5;&#x63A7;&#x5236;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x5BFC;&#x81F4;&#x65E0;&#x9650;&#x5FAA;&#x73AF;</p>
+<p>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x91CC;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x64CD;&#x4F5C;DOM&#xFF0C;&#x548C;&#x53D1;&#x8D77;&#x670D;&#x52A1;&#x5668;&#x8BF7;&#x6C42;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;setState&#xFF0C;&#x4F46;&#x662F;&#x6CE8;&#x610F;&#x4E00;&#x5B9A;&#x8981;&#x7528;if&#x8BED;&#x53E5;&#x63A7;&#x5236;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x5BFC;&#x81F4;&#x65E0;&#x9650;&#x5FAA;&#x73AF;</p>
+<h2 id="&#x5378;&#x8F7D;&#x9636;&#x6BB5;">&#x5378;&#x8F7D;&#x9636;&#x6BB5;</h2>
+<p>&#x5378;&#x8F7D;&#x9636;&#x6BB5;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x7684;&#x7EC4;&#x4EF6;&#x88AB;&#x5378;&#x8F7D;&#x6216;&#x8005;&#x9500;&#x6BC1;&#x4E86;
+&#x8FD9;&#x4E2A;&#x9636;&#x6BB5;&#x7684;&#x8EAB;&#x5F71;&#x5468;&#x671F;&#x51FD;&#x6570;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#xFF1A;</p>
+<ul>
+<li>componentWillUnmount</li>
+</ul>
+<h3 id="componentwillunmount">componentWillUnmount</h3>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x7684;&#x7EC4;&#x4EF6;&#x88AB;&#x5378;&#x8F7D;&#x6216;&#x8005;&#x9500;&#x6BC1;&#x4E86;&#x5C31;&#x4F1A;&#x8C03;&#x7528;&#x8FC7;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x91CC;&#x6E05;&#x695A;&#x4E00;&#x4E9B;&#x5B9A;&#x65F6;&#x5668;&#xFF0C;&#x53D6;&#x6D88;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#xFF0C;&#x6E05;&#x7406;&#x65E0;&#x6548;&#x7684;DOM&#x5143;&#x7D20;&#x7B49;&#x5783;&#x573E;&#x6E05;&#x7406;&#x5DE5;&#x4F5C;</p>
+<p>&#x6CE8;&#x610F;&#x4E0D;&#x8981;&#x5728;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x91CC;&#x8C03;&#x7528;setState&#xFF0C;&#x56E0;&#x4E3A;&#x7EC4;&#x4EF6;&#x4E0D;&#x4F1A;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x4E86;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ant-design-pro-layout底部Footer更改.html" class="navigation navigation-prev " aria-label="Previous page: ant-design-pro-layout底部Footer更改">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="React-routerv4路由配置方法.html" class="navigation navigation-next " aria-label="Next page: React-routerv4路由配置方法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"React生命周期","level":"1.3.13","depth":2,"next":{"title":"React-routerv4路由配置方法","level":"1.3.14","depth":2,"path":"React/React-routerv4路由配置方法.md","ref":"React/React-routerv4路由配置方法.md","articles":[]},"previous":{"title":"ant-design-pro-layout底部Footer更改","level":"1.3.12","depth":2,"path":"React/ant-design-pro-layout底部Footer更改.md","ref":"React/ant-design-pro-layout底部Footer更改.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"coco","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端技术总结","language":"zh-hans","links":{"sidebar":{"笔记":"notes.gcc68.com"}},"gitbook":"*","description":""},"file":{"path":"React/React生命周期.md","mtime":"2020-06-18T01:16:42.245Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-18T01:17:26.089Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
